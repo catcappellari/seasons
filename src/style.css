@@ -1,0 +1,158 @@
+body {
+  font-family: 'Abel', sans-serif;
+  font-size: 100%;
+  line-height: 1.2;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body, body * {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+small {
+  font-size: .875rem;
+}
+.u-line-height-1 {
+  line-height: 1;
+}
+.season {
+  text-align: center;
+  background-color: #BBDEFB;
+  position: relative;
+}
+.season:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #1A237E;
+  opacity: 0;
+  transition: opacity .33s ease-out;
+}
+.season__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+}
+.season_night:after {
+  opacity: .75;
+}
+.headline {
+  flex: 1 0 auto;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 1rem;
+  font-size: 1.5em;
+}
+.headline__select {
+  text-transform: capitalize;
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  font-family: 'Abel', sans-serif;
+  font-size: inherit;
+  background: none;
+  background-image: url('../public/assets/arrow_down.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 2rem;
+  color: #0D47A1;
+  border-radius: 0;
+  border-bottom: 2px solid;
+  padding-right: 2rem;
+  margin: .25em;
+  font-size: inherit;
+}
+.headline__select option {
+  font-size: 1.25rem;
+}
+.season_night .headline__select {
+  color: #fff;
+  background-image: url('../public/assets/arrow_down_fff.svg');
+}
+.tree {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+}
+.tree_attr {
+  line-height: 1.1;
+}
+.tree_attr a {
+  color: inherit;
+}
+.tree svg {
+  max-width: 100%;
+  height: auto;
+  width: 60vw;
+  margin: 0 auto;
+}
+.tree__trunk {
+  fill: #795548;
+}
+.tree__leaf {
+  fill: #388E3C;
+}
+.tree__leaf_b {
+  fill: #66BB6A;
+}
+.fall .tree__leaf {
+  fill: #FFA726;
+}
+.fall .tree__leaf_b {
+  fill: #EF6C00;
+}
+.winter .tree__leaf {
+  fill: #64B5F6;
+}
+.winter .tree__leaf_b {
+  fill: #fff;
+}
+.spring .tree__leaf {
+  fill: #66BB6A;
+}
+.spring .tree__leaf_b {
+  fill: #F48FB1;
+}
+.illuminator {
+  flex: 0 1 auto;
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (min-width: 620px) {
+  .season__wrapper {
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+  }
+  .illuminator {
+    align-self: flex-start;
+  }
+  .headline {
+    text-align: left;
+    padding: 1em 0rem 1em 1em;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .headline {
+    font-size: 4em;
+  }
+}
